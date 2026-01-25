@@ -4,8 +4,7 @@ Course: CEN 4010 -- Software Engineering
 
 \## Description Group project building a bookstore REST API.
 
-\## Tech Stack - Backend: Spring boot - Database: MongoDB - Frontend:
-TBD
+\## Tech Stack - Backend: Spring boot - Database: MongoDB
 
 \## Team Workflow - Pull before coding - Commit small changes - Push
 frequently
