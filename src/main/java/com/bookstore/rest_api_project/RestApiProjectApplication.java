@@ -11,3 +11,4 @@ public class RestApiProjectApplication {
 	}
 
 }
+//skeleton setup complete
