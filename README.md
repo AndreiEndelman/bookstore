@@ -9,4 +9,6 @@ Course: CEN 4010 -- Software Engineering
 \## Team Workflow - Pull before coding - Commit small changes - Push
 frequently
 
+The main branch will be protected
+
 \## Team Members - Andrei - Luis - Luke - Peter - Steven - Anthony
