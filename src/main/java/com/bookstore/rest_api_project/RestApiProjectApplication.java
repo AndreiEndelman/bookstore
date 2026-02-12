@@ -15,12 +15,13 @@ public class RestApiProjectApplication {
         SpringApplication.run(RestApiProjectApplication.class, args);
     }
 
-    // ✅ This is the new part
     @Bean
     CommandLineRunner testMongo(BookRepository repo) {
         return args -> {
             // Add a sample book to the DB
             repo.save(new Book("1", "Clean Code", "Robert Martin"));
+            repo.save(new Book("2", "Nights of Plague", "Orhan Pamuk"));
+            repo.save(new Book("3", "Trigun Maximum", "Yasuhiro Nightow"));
 
             // Print all books in the DB
             System.out.println("Books in DB: " + repo.findAll());
