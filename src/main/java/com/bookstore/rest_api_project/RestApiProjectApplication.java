@@ -20,7 +20,7 @@ public class RestApiProjectApplication {
     CommandLineRunner testMongo(BookRepository repo) {
         return args -> {
             // Add a sample book to the DB
-            repo.save(new Book("1", "Clean Code", "Robert Martin"));
+            repo.save(new Book("1", "Clean Code", "Robert Martin","Non-Fiction"));
 
             // Print all books in the DB
             System.out.println("Books in DB: " + repo.findAll());

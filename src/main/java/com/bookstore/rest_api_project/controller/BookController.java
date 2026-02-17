@@ -3,6 +3,7 @@ package com.bookstore.rest_api_project.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bookstore.rest_api_project.model.Book;
@@ -20,5 +21,10 @@ public class BookController {
     @GetMapping("/books")
     public List<Book> getAllBooks() {
         return repo.findAll();
+    }
+
+    @GetMapping("/books/genre/{genre}")
+    public List<Book> getBooksByGenre(@PathVariable String genre) {
+        return repo.findByGenreIgnoreCase(genre);
     }
 }
