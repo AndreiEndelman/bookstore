@@ -1,18 +1,16 @@
 package com.bookstore.rest_api_project.model;
 
-import org.springframework.data.annotation.Id;
-
 public class CartItem {
-    @Id
-    private String id;
     private String bookId;
+    private String bookName;
     private double price;
     private int quantity;
 
-    public CartItem(String bookId, double price) {
+    public CartItem(String bookId, double price, String bookName) {
         this.bookId = bookId;
         this.price = price;
         this.quantity = 1;
+        this.bookName = bookName;
     }
 
     public String getBookId() { return bookId; }

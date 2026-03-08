@@ -1,15 +1,10 @@
 package com.bookstore.rest_api_project.model;
 
-import java.util.Set;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import jakarta.validation.constraints.NotBlank;
 
 @Document(collection = "users")
 public class User {
@@ -38,4 +33,18 @@ public class User {
     public String getUsername() { return username; }
     public void setUsername(String username) { this.username = username; }
     public void setPassword(String password) { this.password = password; }
+    public List<CartItem> getCart() {return this.cart;}
+    public void addToCart(String bookId, double price, String title) {
+        for (CartItem item : cart) {
+            if (item.getBookId().equals(bookId)) {
+                item.addOne();
+                return;
+            }
+        }
+        cart.add(new CartItem(bookId, price, title));
+    }
+
+    public void removeFromCart(String bookId) {
+        cart.removeIf(item -> item.getBookId().equals(bookId));
+    }
 }
