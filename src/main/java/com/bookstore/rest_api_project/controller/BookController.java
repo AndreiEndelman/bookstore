@@ -49,4 +49,11 @@ public List<Book> getBooksByGenre(@RequestParam String genre) {
 
 }
 
+@GetMapping("/books/top-sellers")
+public List<Book> getTopSellers() {
+    
+    return repo.findTop10ByOrderByCopiesSoldDesc();
+
+}
+
 }
