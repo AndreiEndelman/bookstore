@@ -25,6 +25,7 @@ public class RestApiProjectApplication {
 
             // Print all books in the DB
             System.out.println("Books in DB: " + repo.findAll());
+
         };
     }
 }
