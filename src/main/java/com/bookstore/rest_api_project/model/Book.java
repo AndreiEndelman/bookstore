@@ -37,12 +37,13 @@ public class Book {
     private String publisher;
     private int yearPublished;
     private int copiesSold;
+    private double rating;
 
     public Book() {}
 
     public Book(String isbn, String title, String description, double price,
                 String authorId, String genre, String publisher,
-                int yearPublished, int copiesSold) {
+                int yearPublished, int copiesSold, double rating) {
         this.isbn = isbn;
         this.title = title;
         this.description = description;
@@ -52,6 +53,7 @@ public class Book {
         this.publisher = publisher;
         this.yearPublished = yearPublished;
         this.copiesSold = copiesSold;
+        this.rating = rating;
     }
 
     // getters and setters
@@ -73,5 +75,7 @@ public class Book {
     public void setYearPublished(int yearPublished) { this.yearPublished = yearPublished; }
     public int getCopiesSold() { return copiesSold; }
     public void setCopiesSold(int copiesSold) { this.copiesSold = copiesSold; }
+    public void setRating(double rating) { this.rating = rating; }
+    public double getRating() {return rating;}
 }
 }

@@ -18,12 +18,13 @@ public class RestApiProjectApplication {
     @Bean
     CommandLineRunner testMongo(BookRepository repo) {
         return args -> {
-            // Add a sample book to the DB
-            repo.save(new Book("1", "Clean Code", "Robert Martin"));
-            repo.save(new Book("2", "Nights of Plague", "Orhan Pamuk"));
-            repo.save(new Book("3", "Trigun Maximum", "Yasuhiro Nightow"));
+          
+            // Add sample books to the DB
+          
+            repo.save(new Book("978-0-13-468599-1", "Clean Code", "A handbook of agile software craftsmanship.", 35.99, "author1", "Technology", "Prentice Hall", 2008, 500000, 4.6));
+            repo.save(new Book("978-0-374-23000-1", "Nights of Plague", "A historical novel set in the Ottoman Empire.", 27.99, "author2", "Fiction", "Farrar Straus Giroux", 2022, 150000, 3.5));
+            repo.save(new Book("978-1-59582-040-1", "Trigun Maximum", "A sci-fi western manga series.", 14.99, "author3", "Manga", "Dark Horse Comics", 2004, 300000, 4.2));
 
-            // Print all books in the DB
             System.out.println("Books in DB: " + repo.findAll());
 
         };
