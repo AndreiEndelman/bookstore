@@ -11,4 +11,4 @@ frequently
 
 The main branch will be protected, really this time
 
-\## Team Members - Andrei - Luis - Luke - Peter - Steven - Anthony
+\## Team Members - Andrei - Luis - Luke - Peter - Steven
